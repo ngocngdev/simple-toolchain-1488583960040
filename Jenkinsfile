@@ -11,8 +11,7 @@ node {
         withSonarQubeEnv('Default SQ Server') {
             sh "${scannerHome}/bin/sonar-scanner \
                     -Dsonar.projectKey=simple-toolchain-1488583960040 \
-                    -Dsonar.sources=. \
-                    -Dsonar.organization=ccox-ibm-github";
+                    -Dsonar.sources=. ";
             //save host and auth token used to configure the SQ tool
             sonarHost = SONAR_HOST_URL;
             authToken = SONAR_AUTH_TOKEN + ":";
